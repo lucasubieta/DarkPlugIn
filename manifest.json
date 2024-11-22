@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Modo Oscuro Mejorado",
+    "version": "1.0",
+    "description": "Aplica el modo oscuro a cualquier página web de manera eficiente y dinámica.",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["darkmode.css"]  
+      }
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
+  
