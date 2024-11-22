@@ -33,9 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function toggleDarkMode(isDarkMode) {
     if (isDarkMode) {
-      document.body.classList.add('dark-mode');
+      document.body.style.backgroundColor = '#121212';
+      document.body.style.color = '#e0e0e0';
     } else {
-      document.body.classList.remove('dark-mode');
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
     }
   }
-  
